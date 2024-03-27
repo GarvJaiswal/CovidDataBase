@@ -1,0 +1,11 @@
+/*22 Trigger for Delete function*/
+CREATE TRIGGER TRIG_CONFIRMED
+ON COUNTRY_WISE_LATEST
+AFTER DELETE
+AS 
+BEGIN
+      PRINT'DATA HAS BEEN DELETED'
+END;
+
+DELETE FROM country_wise_latest
+WHERE Country_Region = 'Vatican City';
